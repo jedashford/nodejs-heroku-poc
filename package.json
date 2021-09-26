@@ -1,0 +1,14 @@
+{
+  "name": "node-heroku-test",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./app.js"
+  },
+  "dependencies": {
+    "apollo-server-express": "^3.3.0",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "graphql": "^15.6.0"
+  }
+}
