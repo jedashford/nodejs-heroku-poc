@@ -2,6 +2,7 @@ var express = require('express');
 const { ApolloServer, gql } = require('apollo-server-express');
 
 var app = express();
+const PORT = process.env.PORT || 5000;
 
 async function startApolloServer({app}) {
   // Construct a schema, using GraphQL schema language
@@ -22,8 +23,8 @@ async function startApolloServer({app}) {
   await server.start()
   server.applyMiddleware({ app });
 
-  app.listen({ port: 4000 }, () =>
-    console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`)
+  app.listen({ port: PORT }, () =>
+    console.log(`🚀 Server ready at http://localhost:${PORT}${server.graphqlPath}`)
   );
 }
 
